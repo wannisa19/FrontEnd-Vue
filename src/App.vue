@@ -1,19 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <layout-header />
+    <div id="app">
+      <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+      <Solution msg="Welcome to Your Vue.js App" />
+      <!-- <SubSolution /> -->
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Solution from "./components/Solution.vue";
+// import SubSolution from "./components/SubSolution.vue";
+import LayoutHeader from "./components/LayoutHeader.vue";
+import store from "./vuex/store";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Solution,
+    LayoutHeader,
+  },
+  store,
+};
 </script>
 
 <style>
@@ -21,8 +30,11 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  /* padding: 20px; */
+  height: auto;
+  /* position: relative;
+  display: block; */
 }
 </style>
